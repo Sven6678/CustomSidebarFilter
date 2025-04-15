@@ -1,0 +1,31 @@
+{
+  "name": "CustomSidebarFilter",
+  "namespace": "CustomSidebarFilter",
+  "type": "widget",
+  "description": {
+    "de": "Benutzerdefinierter Sidebar-Filter für Ceres"
+  },
+  "author": "Sven6678",
+  "version": "1.0.0",
+  "pluginSet": "Ceres",
+  "require": {
+    "plentyshop": ">=5.0.0"
+  },
+  "filterSettings": {
+    "gender": {
+      "layout": "vertical",
+      "options": ["Damen", "Herren", "Unisex"],
+      "type": "checkbox"
+    },
+    "age": {
+      "layout": "vertical",
+      "options": ["Erwachsene", "Kinder"],
+      "type": "checkbox"
+    },
+    "availability": {
+      "layout": "vertical",
+      "options": ["Sofort lieferbar", "Lieferzeit 4-6 Tage", "Bald verfügbar"],
+      "type": "checkbox"
+    }
+  }
+}

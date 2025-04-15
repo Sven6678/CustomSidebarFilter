@@ -1,0 +1,15 @@
+<div class="sidebar-filter-container">
+  <div class="filter-toggle" id="toggleFilter">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="..." /></svg>
+    <span>Filter</span>
+  </div>
+
+  <div class="filter-section" id="filterSection">
+    {% include 'CustomSidebarFilter::partials/facet-filter.twig' %}
+  </div>
+
+  <button id="resetFilter">Zurücksetzen</button>
+</div>
+
+<link rel="stylesheet" href="{{ plugin_path('CustomSidebarFilter') }}/resources/css/sidebar-filter.css">
+<script src="{{ plugin_path('CustomSidebarFilter') }}/resources/js/sidebar-filter.js"></script>

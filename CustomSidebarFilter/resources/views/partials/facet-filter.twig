@@ -1,0 +1,32 @@
+{% for facet in facets %}
+  <div class="filter-box">
+    <h4>{{ facet.label }}</h4>
+
+    {% if facet.layout == 'vertical' %}
+      {% for option in facet.options %}
+        <label><input type="checkbox" name="{{ facet.label }}" value="{{ option }}"> {{ option }}</label><br>
+      {% endfor %}
+
+    {% elseif facet.layout == 'grid' %}
+      <div class="grid grid-cols-5">
+        {% for option in facet.options %}
+          <label><input type="checkbox" name="{{ facet.label }}" value="{{ option }}"> {{ option }}</label>
+        {% endfor %}
+      </div>
+
+    {% elseif facet.layout == 'circle' %}
+      <div class="color-circles">
+        {% for option in facet.options %}
+          <div class="color-circle" style="background-color: {{ option.colorCode }}"></div>
+          <span>{{ option.label }}</span>
+        {% endfor %}
+      </div>
+
+    {% elseif facet.layout == 'range' %}
+      <div class="price-range">
+        <input type="number" placeholder="Min" name="price-min">
+        <input type="number" placeholder="Max" name="price-max">
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}

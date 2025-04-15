@@ -1,0 +1,21 @@
+.sidebar-filter-container {
+  border: 1px solid #eee;
+  padding: 1rem;
+}
+
+.color-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 6px;
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
